@@ -1,0 +1,11 @@
+h1, h3{
+    color: aqua;
+}
+a{
+    color: red;
+}
+img{
+    height: 150px;
+    width: 150px;
+    display: inline;
+}
