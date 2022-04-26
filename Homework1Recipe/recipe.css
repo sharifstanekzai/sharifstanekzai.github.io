@@ -1,0 +1,42 @@
+body{
+    background-image: url("silverware.jpg");
+    background-attachment: fixed ;
+}
+#title{
+    width: 100%;
+    text-align: center;
+}
+.heading{
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-decoration: underline;
+    display: inline-block;
+    letter-spacing: 0.25em;
+}
+h1{
+    text-align: center;
+}
+li>p{
+    font-weight: bold;
+    display: inline;
+}
+.comments{
+    font-style: italic;
+    background-color: yellow;
+    margin: 15px 10%;
+    text-overflow:clip;
+    padding: 0;
+}
+a{
+    color: #A4A400;
+    text-decoration: underline;
+    display: block;
+}
+ul{
+    list-style-image: url("pie_icon.gif");
+}
+.copyright{
+    text-align: right;
+    width: 300px;
+    line-height: 0%;
+}
