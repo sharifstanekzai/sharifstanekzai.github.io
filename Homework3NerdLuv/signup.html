@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <form>
+        <fieldset id="content">
+            <legend>New User Signup</legend>
+            <div class="control">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" size="16" placeholder="max 16 characters"
+                    pattern="[A-Za-z\s]{3,16}" />
+            </div>
+            
+            <div class="control">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="male" value="male" checked><label for="male"> Male</label>
+                <input type="radio" name="gender" id="fe    male"  value="female"><label for="female"> Female</label>
+            </div>
+            <div class="control">
+                <label for="age">Age:</label>
+                <input type="text" size="6" maxlength="2" id="age" name="age" placeholder="" pattern="[0-9]{2}" />
+            </div>
+            <div class="control">
+                <label for="pt">Personality Type:</label>
+                <input type="text" id="pt" name="pt" size="6" maxlength="4"
+                    pattern="[A-Za-z]{4}" />
+                <span>(<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">Don't know your type?</a>)</span>
+            </div>
+            <div class="control">
+                <label for="OS">Favorite OS:</label>
+                <select name="OS">
+                    <option value="Windows" selected>Windows</option>
+                    <option value="Mac OS">Mac OS X</option>
+                    <option value="Linux">Linux</option>
+                </select>
+
+            </div>
+            <div class="control">
+                <label for="rangeMin">Age Range:</label>
+                <input type="text" size="6" maxlength="2" placeholder="min" pattern="[0-9]{2}" id="rangeMin" name="rangeMin"  />
+                <input type="text" size="6" maxlength="2" placeholder="max" pattern="[0-9]{2}"  id="rangeMax" name="rangeMax"  />
+            </div>
+            <hr>
+            <div class="control">
+                <input type="submit" value="Sign Up">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

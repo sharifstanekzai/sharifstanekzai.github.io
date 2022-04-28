@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <form>
+        <div id="content">
+            <h1>Retrieve your grades</h1>
+            <div class="control">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="max 20 characters"
+                    pattern="[A-Za-z\s]{1,20}" />
+            </div>
+            <div class="control">
+                <label for="studentId">ID:</label>
+                <input type="text" id="studentId" name="studentId" placeholder="6 digit" pattern="[0-9]{6}" />
+            </div>
+            <div class="control">
+                <label for="entry">Entry:</label>
+                <input type="radio" name="entry" value="Jan 2021" checked> Jan-2021
+                <input type="radio" name="entry" value="Apr 2021"> Apr-2021
+            </div>
+            <div class="control">
+                <label for="entry">Aggrement:</label>
+                <input type="checkbox" name="aggrement" value="aggree">I agree
+            </div>
+            <hr>
+            <div class="control">
+                <input type="submit" value="View Grades">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

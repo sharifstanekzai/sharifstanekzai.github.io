@@ -1,0 +1,39 @@
+
+#content{
+    color: #3c3c3c;
+    padding: 10pt;
+    border: 2px grey outset;
+    border-radius: 5pt;
+	display: inline;
+  background-color: rgb(223, 207, 255);
+}
+legend{
+    border: 1px gray outset;
+    background-color: white;
+}
+input[type=submit]{
+    background-color: salmon;
+    font-weight: bold;
+    border: 2px maroon outset;
+}
+input[type=submit]:active{
+    background-color: rgb(249, 95, 77);
+    border: 2px maroon inset;
+}
+span > a{
+	color: tomato;
+	font-size: 8pt;
+}
+.control{
+    margin-bottom: 5pt;
+}
+.control > label:first-child{
+    display: inline-block;
+   width:130px;
+   font-weight: bold;
+}
+
+.control > input[type="submit"]{
+    display: inline-block;
+    box-sizing: border-box; 
+}

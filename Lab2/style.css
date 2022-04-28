@@ -1,0 +1,26 @@
+#content{
+    color: #3c3c3c;
+    padding: 10pt;
+    border: 1px grey inset;
+    border-radius: 10pt;
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.control{
+    margin-bottom: 5pt;
+    width: 100%;
+}
+.control > label{
+    display: inline-block;
+   width:100px;
+}
+.control > input[type="text"],
+.control > input[type="submit"]{
+    display: block;
+    width: 100%;
+    box-sizing: border-box; 
+
+}
