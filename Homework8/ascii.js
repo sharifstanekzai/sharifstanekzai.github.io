@@ -1,14 +1,14 @@
 "use strinct";
+var interval;
+var index=0; // used to control the active frame
+var initialText;
+var timeOut=250;
 $(document).ready(function(){
     $('#start').click(startAnimation);
     $('#stop').click(stopAnimation);
     $('#size').change(changeSize);
     $('#speed').change(changeSpeed);
 });
-var interval;
-var index=0; // used to control the active frame
-var initialText;
-var timeOut=250;
 function startAnimation(e){
     let selectedAnimation=$('#animation').val();
     let frames=ANIMATIONS[selectedAnimation].split("=====\n"); //splitting the animation string into array
