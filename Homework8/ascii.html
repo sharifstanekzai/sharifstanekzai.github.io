@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCIImations</title>
+    <link rel="stylesheet" type="text/css" href="ascii.css">
+</head>
+<body>
+    <h1>CSE 190 M ASCII Animation Viewer</h1>
+    <div class="centered">
+    <textarea name="screen" id="screen" cols="80" rows="20"></textarea>
+    <div id="footer">
+        <div class="field">
+            <fieldset>
+                <legend>Play Controls:</legend>
+                <input type="button" value="Start" name="start" id="start">
+                <input type="button" value="Stop" name="stop" id="stop">
+            </fieldset>
+        </div>
+        <div class="field">
+            <fieldset>
+                <legend>Animation:</legend>
+                <select id="animation" name="animation">
+                    <option value="blank">Blank</option>
+                    <option value="EXERCISE">EXERCISE</option>
+                    <option value="JUGGLER">JUGGLER</option>
+                    <option value="BIKE">BIKE</option>
+                    <option value="DIVE">DIVE</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="field">
+            <fieldset>
+                <legend>Size:</legend>
+                <select id="size" name="size">
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+                    <option value="12pt">Medium</option>
+                    <option value="16pt">Large</option>
+                    <option value="24pt">Extra Large</option>
+                    <option value="32pt">XXL</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="field">
+            <fieldset>
+                <legend>Speed:</legend>
+                <input type="checkbox" id="speed" name="speed">
+                <label for="speed"> Turbo</label>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="ascii.js"></script>
+<script src="eventHandlers.js"></script>
+<script src="animations.js"></script>
+</html>

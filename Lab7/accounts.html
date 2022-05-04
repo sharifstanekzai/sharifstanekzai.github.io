@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Accounts</title>
+    <script src="accounts.js"></script>
+</head>
+<body>
+    <div is="content">
+        <div class="control">
+            <label for="account">Account Name:</label>
+            <input type="text" name="account" id="account">
+        </div>
+        <div class="control">
+            <label for="balance">Opening Balance:</label>
+            <input type="text" name="balance" id="balance">
+        </div>
+        <div calss="control">
+            <input type="button" id="btn" value="Create Account">
+            <input type="button" id="debit" value="Debit " onclick="window.location.href = 'transaction.html?transactionType=debit';">
+            <input type="button" id="credit" value="Credit"  onclick="window.location.href = 'transaction.html?transactionType=credit';">
+            <input type="button" id="clear" onclick="clearAccounts();" value="Clear Accounts">
+        </div>
+        <div calss="control">
+            <select id="accounts" size="5">
+
+            </select>
+        </div>
+    </div>
+</body>
+</html>
