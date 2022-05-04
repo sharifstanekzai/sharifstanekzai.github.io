@@ -1,8 +1,8 @@
 
 window.onload = function () {
     let accounts=document.getElementById("accounts");
+    // if local storage has accounts then filling select control
     if(localStorage.accounts!=undefined){
-
         let localAcounts=JSON.parse(localStorage.accounts);
         for(let v of localAcounts){
             let opt=document.createElement("option");
@@ -10,17 +10,14 @@ window.onload = function () {
             accounts.appendChild(opt);
         }
     }
-
-
     let btn = document.getElementById('btn');
     btn.onclick = function () {
         if (document.getElementById('account').value != "" &&
             !isNaN(parseFloat(document.getElementById('balance').value))) {
-
             let ac = new Account();
             ac.createAccount();
             Account.accountInfoList.push(ac);
-
+            
             let account = document.createElement("option");
             account.value = Account.accountInfoList[Account.accountInfoList.length-1].getAccountDetails();
             account.innerText = Account.accountInfoList[Account.accountInfoList.length-1].getAccountDetails();
