@@ -1,11 +1,10 @@
+"use strinct";
 $(document).ready(function(){
     $('#start').click(startAnimation);
     $('#stop').click(stopAnimation);
     $('#size').change(changeSize);
     $('#speed').change(changeSpeed);
 });
-
-
 var interval;
 var index=0; // used to control the active frame
 var initialText;

@@ -24,3 +24,12 @@ textarea{
     border: 5px black solid;
     vertical-align: text-top;
 }
+#validators{
+    opacity: 0.5;
+    position: fixed;
+    bottom:0%;
+    right: 0%;
+}
+#validators:hover{
+    opacity: 1;
+}
