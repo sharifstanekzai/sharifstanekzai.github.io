@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form action="http://localhost:8080/math">
+        <div>
+            <p>Enter two numbers</p>
+            <select name="operation" id="operation">
+                <option value="add" selected>Add (+)</option>
+                <option value="subtract">Subtract (-)</option>
+                <option value="multiply">Multiply (*)</option>
+                <option value="divide">Divide (&divide;)</option>
+            </select>
+            <input type="text" name="first" /><br />
+            <input type="text" name="second" /><br />
+            <input type="submit" value="Click" />
+        </div>
+    </form>
+</body>
+</html>
