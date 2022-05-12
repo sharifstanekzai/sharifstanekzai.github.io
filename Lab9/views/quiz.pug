@@ -1,0 +1,13 @@
+html    
+    head
+    body
+        form(method="post")
+            h1 The Number Quiz
+            p Total Correct #{correctAnswers}
+            -if(sequence!=null){
+                p Guess the next number in sequence
+                p(id="sequence") #{sequence}
+                p Your Answer:
+                input(type="text" id='answer' name="answer")
+                input(type="submit" value="Submit")
+            -}
