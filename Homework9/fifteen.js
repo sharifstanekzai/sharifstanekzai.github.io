@@ -8,6 +8,12 @@ $(document).ready(function(){
     $('#puzzlearea div').on('click',function(){
         move($(this));
     });
+    $('#puzzlearea div').on('mouseover',function(){
+        verifyMovement($(this));
+    });
+    $('#puzzlearea div').on('mouseout',function(){
+        $(this).css('border-color','black');
+    });
     $('#shufflebutton').on('click',shuffle);
 });
 function createPuzzle(  ){
@@ -20,6 +26,7 @@ function createPuzzle(  ){
         $(this).css('background-position',-left+'px'+' '+-top+'px');
         $(this).css('left',left+'px');
         $(this).css('top',top+'px');
+        $(this).css('transition','left 0.5s, top 0.5s, border-color 1s');
         left+=left===300?-300:100;
         top+=left===0?100:0;
     });
@@ -29,13 +36,26 @@ function move(el){
         top:parseInt($(el).css('top')),
         left:parseInt($(el).css('left'))
     }
-    if(elementProperties.top===empty.top || elementProperties.left===empty.left){
+    if(Math.abs(elementProperties.top-empty.top) + Math.abs(elementProperties.left-empty.left)===100){
         let temp=empty;
         empty=elementProperties;
         $(el).css('left',temp.left+'px');
         $(el).css('top',temp.top+'px');
     }
 }
+function verifyMovement(el){
+    let elementProperties={
+        top:parseInt($(el).css('top')),
+        left:parseInt($(el).css('left'))
+    }
+    if(Math.abs(elementProperties.top-empty.top) + Math.abs(elementProperties.left-empty.left)===100){
+        $(el).css('border-color','rgb(133, 192, 133)');
+    }
+    else{
+        $(el).css('border-color','#f88');
+    }
+}
+
 function shuffle(){
     let pieces=$('#puzzlearea div');
     let left=0;
@@ -58,5 +78,4 @@ function shuffle(){
         helper=helper.filter(e=>e!=undefined);
     }
     helper=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-    console.log('Shuffled Empty: '+JSON.stringify(empty));
 }
